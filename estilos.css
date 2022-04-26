@@ -10,7 +10,7 @@
 }
 body {
     width: 100%;
-    height: 1400px;
+    height: 350vh;
     display: flex;
     flex-direction: column;
 }
@@ -27,7 +27,7 @@ header {
 }
 main {
     width: 100%;
-    height: 90%;
+    height: 92%;
     background-color: #fffbf7;
     display: flex;
     flex-flow: column nowrap;
@@ -37,7 +37,7 @@ main {
 }
 footer {
     width: 100%;
-    height: 10%;
+    height: 8%;
     background-color: #AB6E42 ;
     color: #eee2c9;
     font-weight: bold;
@@ -102,7 +102,9 @@ footer {
 
 .parte1{
     width: 100%;
-    height: 50%;
+    height: 45%;
+    position: relative;
+    display: flex;
     /* border: 2px black solid; */
 }
 .imagen-principal{
@@ -114,13 +116,18 @@ footer {
 .frase-principal{
     width: min-content;
     height: auto;
-    font-size: 1.8em;
+    margin: auto;
+    font-size: 2.2vw;
     font-family:Verdana, Geneva, Tahoma, sans-serif ;
-    text-align: left;
     color: #AB6E42;
     position: absolute;
-    top: 240px;
-    left: 150px;
+    top: 80px;
+    left: 10%;
+    z-index: 8;
+}
+.imagen-principal::before{
+    content: "";
+    padding-top: 100%;
 }
 
 /* ------- */
@@ -130,12 +137,41 @@ footer {
     height: 100%;
 }
 
-
 /* Parte2 */
 
 .parte2{
     width: 100%;
-    height: 50%;
+    height: 18%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.parte2 img{
+    width: 20%;
+    height: 60%;
+}
+
+/* ------- */
+
+.nosotros{
+    width: 50%;
+    height: 60%;
+}
+.nosotros h2{
+    padding-bottom: 60px;
+    color: #AB6E42;
+    font-weight: bold;
+    font-size: 2.5em;
+}
+.nosotros p{
+    text-align: justify;
+}
+/* Parte3 */
+
+.parte3{
+    width: 100%;
+    height: 37%;
     /* border: 2px black solid; */
     display: flex;
     flex-flow: column nowrap;
@@ -143,13 +179,13 @@ footer {
     align-items: center;
 }
 .tratamientos, .imagen-principal {
-    border: 2px black solid;
+    /* border: 2px black solid; */
 }
 
 .tratamientos{
     width: 100%;
     height: 50%; 
-    margin-top: 30px;
+    margin-top: 0px;
     font-weight: bold;
     text-align: center;
     display: flex;
@@ -157,7 +193,7 @@ footer {
     justify-content: flex-start;
     align-items:center;
     color: #AB6E42;
-    border: #AB6E42 solid;
+    /* border: #AB6E42 solid; */
 }
 .imagenes-tratamientos{
     width: 100%;
@@ -231,13 +267,9 @@ footer a{
 
 /* Animacion del Main */
 
- /* @keyframes slide {
-    0% {margin-left: 0%;}
-    30% {margin-left: 0%;}
-
-    35% {margin-left: -100%;}
-    65% {margin-left: -100%;}
-
-    70% {margin-left: -200%;}
-    100% {margin-left: -200%;} 
-} */
+@media screen and (max-width 768px){
+    
+    .body{
+        height: 100vh;
+    }
+}
