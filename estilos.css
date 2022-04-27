@@ -72,13 +72,12 @@ footer {
     height: 30px;
 }
 .menu-icon img{
-    position: relative;
    width: 30px; 
    height: 30px;
    border-radius: 2px;
 }
 .menu-icon, #check{
-    /* display: none; */
+    display: none;
 }
 
 .menu ul{
@@ -282,14 +281,16 @@ footer a{
 /* Media queris */
 
 @media screen and (max-width:768px){
-
-    /* .logo{
+    .header{
+        color: #E8DCB6;
+    }
+    .logo{
         position: absolute;
         top: 0%;
-        left: 5vw;
+        left: 2vw;
         display: flex;
         justify-content: end;
-    }   */
+    }  
     .checkbtn{
         display: block;
     }
@@ -298,11 +299,12 @@ footer a{
         position: fixed;
         top: 30px;
         right: 75px;
+        color: #E8DCB6;
 }
     .menu ul{
         display: block;
         position: fixed;
-        top: 180px;
+        top: 25%;
         left: -100%;
         background: #AB6E42;
         width: 100%;
@@ -312,7 +314,6 @@ footer a{
     .menu ul li{
         padding: 2rem;
         text-align: center;
-        background-color:#AB6E42;
     }
     .menu ul li a{
         color: #E8DCB6;
